@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:IJAW_Developpy" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="IJAW"
+             x:Class="IJAW_Developpy.Views.AuthPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry              
+                x:Name="Email" Text="{Binding Email}" Placeholder="Email" BackgroundColor="#2c3e84">
+            </Entry>
+            <Entry
+                x:Name="Password" Text ="{Binding Password}" Placeholder="Password" IsPassword="true" BackgroundColor="#2c3e50">
+            </Entry>
+
+            <Button x:Name="btnLogin" Text="Login" Command="{Binding LoginCommand}" >
+            </Button>
+            <Button x:Name="btnSignup" Text="Sign Up" Command="{Binding SignUpCommand}" >
+            </Button>
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

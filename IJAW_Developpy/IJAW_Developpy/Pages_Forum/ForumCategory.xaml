@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title=""
+             x:Class="IJAW_Developpy.Pages_Forum.ForumCategory">
+    <StackLayout>
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+            <ListView x:Name="ListAllThreads" IsPullToRefreshEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Button Clicked="BtnThread_Clicked" WidthRequest="200" Text="{Binding Header}" AutomationId="{Binding ThreadId}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+
+        <StackLayout WidthRequest="100" HorizontalOptions="Center" VerticalOptions="End">
+
+            <Button Clicked="BtnNewThread_Clicked" Text="New"/>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1"
+                  VerticalOptions="End"
+                  BackgroundColor="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Clicked="BtnForum_Clicked" Grid.Column="0"
+                        Text="Forum" />
+                    <Button Grid.Column="1"
+                        Text="Page2" />
+                    <Button Grid.Column="2"
+                        Text="Page3" />
+                    <Button Grid.Column="3"
+                        Text="Page4" />
+                    <Button Grid.Column="4"
+                        Text="Page5" />
+                </Grid>
+            </Grid>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

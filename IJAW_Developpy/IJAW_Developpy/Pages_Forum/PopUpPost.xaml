@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IJAW_Developpy.Pages_Forum.PopUpPost"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             BackgroundColor="Transparent">
+
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="False"/>
+    </pages:PopupPage.Animation>
+
+    <StackLayout VerticalOptions="Center" Padding="20,0" HorizontalOptions="FillAndExpand" >
+        <Frame CornerRadius="10" Padding="0" BackgroundColor="CadetBlue" >
+            <StackLayout Padding="10">
+                <!--<Label x:Name="Header" TextColor="Black" FontSize="20" HorizontalOptions="Center"></Label>-->
+                <ScrollView>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Inlägg: "></Label>
+                            <Frame OutlineColor="Black" Grid.Row="0" Grid.Column="0" Margin="5,5,5,5" Padding="1">
+                                <Editor x:Name="PostBody" MaxLength="300" HeightRequest="150" WidthRequest="250" Text="" />
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="Center" Orientation="Horizontal" HorizontalOptions="Center">
+                            <Button Text="Skriv inlägget" TextColor="Black" Clicked="Button_NewPost"></Button>
+                            <Button Text="Avbryt" TextColor="Black" Clicked="Button_Close"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+    </pages:PopupPage>

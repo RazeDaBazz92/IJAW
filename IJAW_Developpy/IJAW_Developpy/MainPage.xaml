@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="IJAW"
+             x:Class="IJAW_Developpy.MainPage">
+
+    <StackLayout Orientation="Horizontal" VerticalOptions="End">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1"
+                  VerticalOptions="End"
+                  BackgroundColor="LightGray">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Clicked="BtnForum_Clicked" Grid.Column="0"
+                        Text="Forum" />
+                <Button Grid.Column="1"
+                        Text="Page2" />
+                <Button Grid.Column="2"
+                        Text="Page3" />
+                <Button Grid.Column="3"
+                        Text="Page4" />
+                <Button Grid.Column="4"
+                        Text="Page5" />
+            </Grid>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
