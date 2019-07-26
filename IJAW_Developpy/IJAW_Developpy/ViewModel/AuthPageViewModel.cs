@@ -9,7 +9,7 @@ namespace IJAW_Developpy.ViewModel
     public class AuthPageViewModel : INotifyPropertyChanged
     {
         private string _email;
-        private string _password;
+        private string _password; //test
         private bool _isBusy;
         private Command _loginCommand;
         private Command _signUpCommand;
